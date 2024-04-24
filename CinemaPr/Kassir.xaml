@@ -1,0 +1,42 @@
+﻿<Window x:Class="CinemaPr.Kassir"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CinemaPr"
+        mc:Ignorable="d"
+        Title="Kassir" Height="460" Width="745">
+    <Grid>
+
+
+        <Grid Background="#FF63588C">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110"/>
+                <ColumnDefinition Width="14"/>
+                <ColumnDefinition Width="124*"/>
+                <ColumnDefinition Width="280*"/>
+                <ColumnDefinition Width="245*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="13*"/>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="120*"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="TicketsCbx" DisplayMemberPath="Status" Grid.Row="1" Grid.Column="4" SelectionChanged="TicketsCbx_SelectionChanged" HorizontalAlignment="Center" Width="234"/>
+            <TextBox x:Name="SearchTxt" Grid.ColumnSpan="4" Grid.RowSpan="2" Margin="0,0,268,0"/>
+            <Button Content="Очистить" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" Margin="0,0,234,0" Background="#FF714BA9"/>
+
+            <Button x:Name="Users_show" Content="Данные для продажи"  Background="#FF9D80A2" BorderBrush="Black"  Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="4" Click="Sales_show_Click_1" Margin="0,1,268,348" Grid.RowSpan="2"/>
+            <Button x:Name="Tickets_show" Content="Билеты"  Background="#FF9D80A2" BorderBrush="Black"  Grid.Row="2"  Grid.Column="4" Click="Ticket_show_Click_1" Margin="0,1,0,0" Grid.RowSpan="2" Height="45" VerticalAlignment="Top"/>
+            <Button x:Name="Screeening_show" Content="Сеансы"  Background="#FF9D80A2" BorderBrush="Black"  Grid.Row="2"  Grid.Column="3" Click="Screeen_show_Click_1" Margin="0,1,234,349" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+
+            <DataGrid x:Name="SalesDgr"  Grid.ColumnSpan="3" Margin="0,0,0,50" Grid.Row="3"/>
+            <DataGrid x:Name="ScreeningDgr" Grid.Column="3"  Grid.Row="3"/>
+            <DataGrid x:Name="TicketsDgr" Grid.Column="4" Grid.Row="3"/>
+
+        </Grid>
+    </Grid>
+</Window>
